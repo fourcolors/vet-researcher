@@ -1,6 +1,9 @@
 [tools]
 python = "3.10"
 poetry = "latest"
+node = "20"
+pnpm = "latest"
 
 [env]
 PYTHONPATH = "${PWD}"
+NODE_ENV = "development"

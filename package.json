@@ -1,15 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "build": "poetry install",
-    "dev": "cd apps/api && poetry run vet-researcher-api",
-    "lint": "cd apps/api && poetry run black . && poetry run isort .",
-    "test": "cd apps/api && poetry run pytest",
+    "build": "turbo build",
+    "dev": "turbo dev --parallel",
+    "lint": "turbo lint",
+    "test": "turbo test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "prettier": "^3.0.3",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.9.0"
+  "packageManager": "pnpm@8.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

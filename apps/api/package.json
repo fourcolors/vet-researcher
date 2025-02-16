@@ -1,0 +1,11 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "poetry run vet-researcher-api",
+    "build": "poetry install",
+    "lint": "poetry run black . && poetry run isort .",
+    "test": "poetry run pytest"
+  }
+}
