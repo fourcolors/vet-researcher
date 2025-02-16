@@ -1,2 +1,6 @@
 [tools]
 python = "3.10"
+poetry = "latest"
+
+[env]
+PYTHONPATH = "${PWD}"

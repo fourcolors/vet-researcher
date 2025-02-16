@@ -1,4 +1,7 @@
 from swarms import Agent, SequentialWorkflow
+from dotenv import load_dotenv
+
+load_dotenv()
 
 chief_medical_officer = Agent(
     agent_name="Chief Veterinary Officer",
@@ -20,7 +23,7 @@ chief_medical_officer = Agent(
     - Veterinary Specialist Consultations Needed
     - Recommended Next Steps
     """,
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=True,
 )
@@ -47,7 +50,7 @@ internist = Agent(
     - Include relevant veterinary classification codes
 
     Document supporting evidence for each code selected with species-specific context.""",
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=True,
 )
@@ -97,7 +100,7 @@ medical_coder = Agent(
     5. **Coding Notes**:
         - Species-specific observations and clarifications needed
     """,
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=True,
 )
@@ -126,7 +129,7 @@ synthesizer = Agent(
         - Documentation improvements needed
 
     Include confidence levels and evidence quality for all diagnoses and codes, considering species-specific factors.""",
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=True,
 )
@@ -160,7 +163,7 @@ synthesizer = Agent(
     - **Maintain Accuracy**: Ensure all summaries are backed by species-specific data.
     - **Simplify Complex Data**: Translate veterinary jargon appropriately.
     """,
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=True,
 )
@@ -188,7 +191,7 @@ summarizer_agent = Agent(
     - **Relevance**: Focus on species-specific important information.
     - **Tone**: Maintain professional veterinary communication.
     """,
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=False,
 )
@@ -238,7 +241,7 @@ lab_matcher = Agent(
     - Veterinary diagnostic codes
     - Species-specific considerations
     """,
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=True,
 )
@@ -295,7 +298,7 @@ treatment_agent = Agent(
     - Breed-specific considerations
     - Alternative treatments when appropriate
     """,
-    model_name="groq/deepseek-r1-distill-llama-70b",
+    model_name="gpt-4o",
     max_loops=1,
     dynamic_temperature_enabled=True,
     do_not_use_cluster_ops=True,
