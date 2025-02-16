@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "poetry install",
+    "dev": "cd apps/api && poetry run vet-researcher-api",
+    "lint": "cd apps/api && poetry run black . && poetry run isort .",
+    "test": "cd apps/api && poetry run pytest",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0"
+}
