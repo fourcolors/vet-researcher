@@ -1,43 +1,24 @@
 [tool.poetry]
 name = "vet-researcher-api"
 version = "0.1.0"
-description = "API for veterinary research analysis"
-authors = ["fourcolors <sterlingcobb@gmail.com>"]
-readme = "README.md"
-packages = [{include = "vet_researcher"}]
+description = "API service for Vet Researcher"
+authors = ["Your Name <your.email@example.com>"]
+packages = [{include = "api", from = "src"}]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<4.0"
-swarms = ">=7.2.2,<8.0.0"
-swarm-models = ">=0.3.2,<0.4.0"
-swarms-memory = ">=0.1.2,<0.2.0"
-python-dotenv = "^1.0.1"
-click = "^8.1.7"
-fastapi = "^0.109.0"
-uvicorn = "^0.27.0"
-pydantic = "^2.6.0"
-langchain = "^0.1.5"
-langchain-core = "^0.1.15"
-vet-researcher-core = {path = "../../packages/vet-researcher-core", develop = true}
+python = "^3.10"
+fastapi = "^0.109.2"
+uvicorn = "^0.27.1"
+python-dotenv = "^1.0.0"
+pydantic = "^2.6.1"
+vet-researcher-core = {path = "../../packages/vet-researcher-core"}
 
-[tool.poetry.group.dev.dependencies]
+[tool.poetry.dev-dependencies]
 pytest = "^7.4.0"
-black = "^23.7.0"
-isort = "^5.12.0"
-flake8 = "^6.1.0"
-mypy = "^1.5.1"
-
-[tool.poetry.scripts]
-vet-researcher-api = "vet_researcher.api.main:start"
 
 [build-system]
-requires = ["poetry-core>=2.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.black]
-line-length = 88
-target-version = ["py310"]
-
-[tool.isort]
-profile = "black"
-multi_line_output = 3
+[tool.poetry.scripts]
+start = "api.main:start" 

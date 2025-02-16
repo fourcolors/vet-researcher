@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "poetry run vet-researcher-api",
+    "dev": "cd src && poetry run python -m api.main",
     "build": "poetry install",
-    "lint": "poetry run black . && poetry run isort .",
+    "start": "cd src && poetry run python -m api.main",
+    "lint": "poetry run pylint src/api",
     "test": "poetry run pytest"
   }
 }
