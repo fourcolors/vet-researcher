@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.so
+.Python
+.venv/
+.env
+poetry.lock
+agent_workspace/
