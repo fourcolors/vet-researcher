@@ -13,6 +13,11 @@ swarm-models = ">=0.3.2,<0.4.0"
 swarms-memory = ">=0.1.2,<0.2.0"
 python-dotenv = "^1.0.1"
 click = "^8.1.7"
+fastapi = "^0.109.0"
+uvicorn = "^0.27.0"
+pydantic = "^2.6.0"
+langchain = "^0.1.5"
+langchain-core = "^0.1.15"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
@@ -23,6 +28,7 @@ mypy = "^1.5.1"
 
 [tool.poetry.scripts]
 vet-researcher = "vet_researcher.cli.main:cli"
+vet-researcher-api = "vet_researcher.api.main:start"
 
 [build-system]
 requires = ["poetry-core>=2.0.0"]
